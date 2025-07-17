@@ -1,19 +1,23 @@
 {
-  "name": "n8n-nodes-<...>",
+  "name": "n8n-nodes-lnkbio",
   "version": "0.1.0",
-  "description": "",
+  "description": "Lnk.Bio connector to create and delete links automatically",
   "keywords": [
+    "linkinbio",
+    "lnkbio",
+    "link in bio",
+    "cms",
     "n8n-community-node-package"
   ],
   "license": "MIT",
-  "homepage": "",
+  "homepage": "https://lnk.bio",
   "author": {
-    "name": "",
-    "email": ""
+    "name": "Lnk.Bio",
+    "email": "info@lnk.bio"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/<...>/n8n-nodes-<...>.git"
+    "url": "https://github.com/gimucco/n8n-nodes-lnkbio.git"
   },
   "engines": {
     "node": ">=20.15"
@@ -33,12 +37,10 @@
   "n8n": {
     "n8nNodesApiVersion": 1,
     "credentials": [
-      "dist/credentials/ExampleCredentialsApi.credentials.js",
-      "dist/credentials/HttpBinApi.credentials.js"
+      "dist/credentials/ExampleCredentialsApi.credentials.js"
     ],
     "nodes": [
-      "dist/nodes/ExampleNode/ExampleNode.node.js",
-      "dist/nodes/HttpBin/HttpBin.node.js"
+      "dist/nodes/LnkBio/LnkBio.node.js"
     ]
   },
   "devDependencies": {
