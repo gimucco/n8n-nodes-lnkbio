@@ -1,5 +1,5 @@
 {
-  "name": "n8n-nodes-lnkbio",
+  "name": "@lnkbio/n8n-nodes-lnkbio",
   "version": "0.1.0",
   "description": "Lnk.Bio connector to create and delete links automatically",
   "keywords": [
@@ -11,13 +11,10 @@
   ],
   "license": "MIT",
   "homepage": "https://lnk.bio",
-  "author": {
-    "name": "Lnk.Bio",
-    "email": "info@lnk.bio"
-  },
+  "author": "Lnk.Bio <info@lnk.bio>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/gimucco/n8n-nodes-lnkbio.git"
+    "url": "git+https://github.com/gimucco/n8n-nodes-lnkbio.git"
   },
   "engines": {
     "node": ">=20.15"
@@ -53,5 +50,8 @@
   },
   "peerDependencies": {
     "n8n-workflow": "*"
+  },
+  "bugs": {
+    "url": "https://github.com/gimucco/n8n-nodes-lnkbio/issues"
   }
 }
