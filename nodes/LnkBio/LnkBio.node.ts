@@ -82,7 +82,8 @@ export class LnkBio implements INodeType {
 						operation: ['create'],
 					},
 				},
-				default: 'https://cdn2.lnk.bi/profilepics/3159524853_20250127590.png',
+				default: '',
+				placeholder: 'https://cdn2.lnk.bi/profilepics/3159524853_20250127590.png'
 			},
 			{
 				displayName: 'Lnk ID',
