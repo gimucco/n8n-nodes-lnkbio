@@ -41,6 +41,8 @@ Do note that if you're only looking to automate your own Lnk.Bio account, you wo
 
 ## Version history
 
+* 0.1.2 - Lint Fixes
+
 * 0.1.0 - initial version
 
 

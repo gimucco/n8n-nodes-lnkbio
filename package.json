@@ -1,6 +1,6 @@
 {
   "name": "@lnkbio/n8n-nodes-lnkbio",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "Lnk.Bio connector to create and delete links automatically",
   "keywords": [
     "linkinbio",
@@ -11,7 +11,11 @@
   ],
   "license": "MIT",
   "homepage": "https://lnk.bio",
-  "author": "Lnk.Bio <info@lnk.bio>",
+  "author": {
+    "name": "Lnk.Bio",
+    "email": "info@lnk.bio",
+    "url": "https://lnk.bio"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/gimucco/n8n-nodes-lnkbio.git"
