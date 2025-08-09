@@ -36,8 +36,8 @@ Do note that if you're only looking to automate your own Lnk.Bio account, you wo
 ## Resources
 
 * [n8n community nodes documentation](https://docs.n8n.io/integrations/#community-nodes)
-* [Lnk.Bio help site][https://help.lnk.bio]
-* [Lnk.Bio API specs][https://api.lnk.bio]
+* [Lnk.Bio help site](https://help.lnk.bio)
+* [Lnk.Bio API specs](https://api.lnk.bio)
 
 ## Version history
 
