@@ -47,22 +47,10 @@ export class LnkBioOAuth2Api implements ICredentialType {
       default: 'basic',
     },
     {
-      displayName: 'Include Credentials on Authorization',
-      name: 'includeCredentialsOnAuthorization',
-      type: 'boolean',
-      default: true,
-    },
-    {
       displayName: 'Authentication Method',
       name: 'authentication',
       type: 'hidden',
       default: 'body',
-    },
-    {
-      displayName: 'Token Request Format',
-      name: 'bodyFormat',
-      type: 'hidden',
-      default: 'form-urlencoded',
-    },
+    }
   ];
 }

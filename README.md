@@ -41,6 +41,8 @@ Do note that if you're only looking to automate your own Lnk.Bio account, you wo
 
 ## Version history
 
+* 0.1.6 - Updated deprecated requestOAuth2 to httpRequestWithAuthentication; Implemented continueOnFail(); Removed includeCredentialsOnAuthorization and bodyFormat;
+
 * 0.1.5 - Credentials fix
 
 * 0.1.3 - Credentials fix

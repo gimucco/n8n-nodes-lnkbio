@@ -130,10 +130,15 @@ export class LnkBio implements INodeType {
 				}
 
 				try {
-					const response = await this.helpers.requestOAuth2.call(this, 'lnkBioOAuth2Api', {
+					const formBody = Object.entries(body)
+						.map(([k, v]) => `${encodeURIComponent(k)}=${encodeURIComponent(String(v))}`)
+						.join('&');
+					const response = await this.helpers.httpRequestWithAuthentication.call(this, 'lnkBioOAuth2Api', {
 						method: 'POST',
 						url: `${LNK_BIO_API_BASE_URL}/lnk/add`,
-						form: body,
+						headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+						body: formBody,
+						json: false,
 					});
 
 					results.push({
@@ -144,6 +149,17 @@ export class LnkBio implements INodeType {
 						},
 					});
 				} catch (error) {
+					if (this.continueOnFail()) {
+						results.push({
+							json: {
+								success: false,
+								action: operation,
+								data: {},
+								error: error
+							},
+						});
+						continue;
+					}
 					if (error.response?.data) {
 						const message = typeof error.response?.data === 'object'
 						? JSON.stringify(error.response.data)
@@ -159,10 +175,15 @@ export class LnkBio implements INodeType {
 				const body: any = { link_id: linkId };
 
 				try {
-					const response = await this.helpers.requestOAuth2.call(this, 'lnkBioOAuth2Api', {
+					const formBody = Object.entries(body)
+						.map(([k, v]) => `${encodeURIComponent(k)}=${encodeURIComponent(String(v))}`)
+						.join('&');
+					const response = await this.helpers.httpRequestWithAuthentication.call(this, 'lnkBioOAuth2Api', {
 						method: 'POST',
 						url: `${LNK_BIO_API_BASE_URL}/lnk/delete`,
-						form: body,
+						headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+						body: formBody,
+						json: false,
 					});
 
 					results.push({
@@ -173,6 +194,17 @@ export class LnkBio implements INodeType {
 						},
 					});
 				} catch (error) {
+					if (this.continueOnFail()) {
+						results.push({
+							json: {
+								success: false,
+								action: operation,
+								data: {},
+								error: error
+							},
+						});
+						continue;
+					}
 					if (error.response?.data) {
 						const message = typeof error.response?.data === 'object'
 						? JSON.stringify(error.response.data)
