@@ -2,7 +2,7 @@
 
 This is an n8n community node. It lets you use Lnk.Bio in your n8n workflows.
 
-Lnk.Bio is a linkinbio service used by more than 1.2M creators to manage their social media links.
+Lnk.Bio is a linkinbio service used by more than 1.5M creators to manage their social media links.
 
 [n8n](https://n8n.io/) is a [fair-code licensed](https://docs.n8n.io/reference/license/) workflow automation platform.
 
@@ -41,7 +41,7 @@ Do note that if you're only looking to automate your own Lnk.Bio account, you wo
 
 ## Version history
 
-* 0.1.8 - Add pairedItem to response handling in LnkBio node
+* 0.1.8.1 - Add pairedItem to response handling in LnkBio node
 
 * 0.1.7 - Updated deprecated requestOAuth2 to httpRequestWithAuthentication; Implemented continueOnFail(); Removed includeCredentialsOnAuthorization and bodyFormat;
 
