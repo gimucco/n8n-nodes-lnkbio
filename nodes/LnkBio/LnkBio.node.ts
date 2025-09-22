@@ -147,6 +147,7 @@ export class LnkBio implements INodeType {
 							action: operation,
 							data: response,
 						},
+						pairedItem: { item: i },
 					});
 				} catch (error) {
 					if (this.continueOnFail()) {
@@ -157,6 +158,7 @@ export class LnkBio implements INodeType {
 								data: {},
 								error: error
 							},
+							pairedItem: { item: i },
 						});
 						continue;
 					}
@@ -192,6 +194,7 @@ export class LnkBio implements INodeType {
 							action: operation,
 							data: response,
 						},
+						pairedItem: { item: i },
 					});
 				} catch (error) {
 					if (this.continueOnFail()) {
@@ -202,6 +205,7 @@ export class LnkBio implements INodeType {
 								data: {},
 								error: error
 							},
+							pairedItem: { item: i },
 						});
 						continue;
 					}
