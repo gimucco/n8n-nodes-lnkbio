@@ -1,6 +1,6 @@
 {
   "name": "@lnkbio/n8n-nodes-lnkbio",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Lnk.Bio connector to create and delete links automatically",
   "keywords": [
     "linkinbio",
@@ -53,7 +53,7 @@
     "typescript": "^5.8.2"
   },
   "peerDependencies": {
-    "n8n-workflow": "*"
+    "n8n-workflow": "^1.17.0"
   },
   "bugs": {
     "url": "https://github.com/gimucco/n8n-nodes-lnkbio/issues"

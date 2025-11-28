@@ -21,7 +21,6 @@ export class LnkBio implements INodeType {
 		},
 		inputs: [NodeConnectionType.Main],
 		outputs: [NodeConnectionType.Main],
-		usableAsTool: true,
 		properties: [
 			{
 				displayName: 'Operation',
