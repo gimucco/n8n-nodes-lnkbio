@@ -86,6 +86,32 @@ export class LnkBio implements INodeType {
 				placeholder: 'https://cdn2.lnk.bi/profilepics/3159524853_20250127590.png'
 			},
 			{
+				displayName: 'Schedule From',
+				description: 'Choose an optional start date for this link. It won\'t be visible before that. Must be RFC3339.',
+				name: 'schedule_from',
+				type: 'string',
+				displayOptions: {
+					show: {
+						operation: ['create'],
+					},
+				},
+				default: '',
+				placeholder: 'YYYY-MM-DDTHH:MM:SS±HH:MM'
+			},
+			{
+				displayName: 'Schedule To',
+				description: 'Choose an optional end date for this link. It won\'t be visible after that. Must be RFC3339.',
+				name: 'schedule_to',
+				type: 'string',
+				displayOptions: {
+					show: {
+						operation: ['create'],
+					},
+				},
+				default: '',
+				placeholder: 'YYYY-MM-DDTHH:MM:SS±HH:MM'
+			},
+			{
 				displayName: 'Lnk ID',
 				name: 'linkId',
 				type: 'number',
@@ -116,6 +142,8 @@ export class LnkBio implements INodeType {
 				const title = this.getNodeParameter('title', i, items[i].json.title || '') as string;
 				const link = this.getNodeParameter('link', i, items[i].json.link || '') as string;
 				const image = this.getNodeParameter('image', i, items[i].json.image || '') as string;
+				const schedule_from = this.getNodeParameter('schedule_from', i, items[i].json.schedule_from || '') as string;
+				const schedule_to = this.getNodeParameter('schedule_to', i, items[i].json.schedule_to || '') as string;
 
 				if (!/^https?:\/\//.test(link)) {
 					throw new NodeOperationError(this.getNode(), 'Link must be a valid URL');
@@ -127,6 +155,12 @@ export class LnkBio implements INodeType {
 						throw new NodeOperationError(this.getNode(), 'Image must be a valid URL for the Image');
 					}
 					body.image = image;
+				}
+				if (schedule_from) {
+					body.schedule_from = schedule_from
+				}
+				if (schedule_to) {
+					body.schedule_to = schedule_to
 				}
 
 				try {

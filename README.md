@@ -41,6 +41,8 @@ Do note that if you're only looking to automate your own Lnk.Bio account, you wo
 
 ## Version history
 
+* 0.2 - Added scheduled_from and scheduled_to parameters to align with the latest version of the Lnk.Bio APIs. The new parameters allow users to schedule links in advance and/or set an expiration date.
+
 * 0.1.9 - Add pairedItem to response handling in LnkBio node
 
 * 0.1.7 - Updated deprecated requestOAuth2 to httpRequestWithAuthentication; Implemented continueOnFail(); Removed includeCredentialsOnAuthorization and bodyFormat;
